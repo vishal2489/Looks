@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Trouser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(document).ready(function () {
+        $(".js-toggle").click(function () {
+          
+            $("a").addClass("selected");
+        });
+    });
+</script>  
+
+<h4>First up: Which trouser fits do&nbsp;you&nbsp;like best?</h4>
+<p class="helper-text">
+    The all-important question … choose more than one if you’re on the fence.
+</p>
+<div class="registration-main">
+    <form class="registration-step-trouser-fits" method="POST" >
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <ul class="image-select-group image-select-group-with-labels ">
+            <li>
+                <a class="js-toggle "  data-item-name="skinny">
+                    <img src="~/Content/Images/Signup/trousers_skinny.jpg">
+                    <label>Skinny</label>
+                </a>
+                <input type="hidden" name="trouser_fits" value="skinny" disabled="disabled">
+            </li>
+            <li>
+                <a class="js-toggle selected"  data-item-name="slim">
+                    <img src="~/Content/Images/Signup/trousers_slim.jpg">
+                    <label>Slim</label>
+                </a>
+                <input type="hidden" name="trouser_fits" value="slim" disabled="disabled">
+            </li>
+            <li>
+                <a class="js-toggle "  data-item-name="straight_regular">
+                    <img src="~/Content/Images/Signup/trousers_straight_regular.jpg">
+                    <label>Straight/Regular</label>
+                </a>
+                <input type="hidden" name="trouser_fits" value="straight_regular" disabled="disabled">
+            </li>
+            <li>
+                <a class="js-toggle "  data-item-name="bootcut">
+                    <img src="~/Content/Images/Signup/trousers_bootcut.jpg">
+                    <label>Bootcut</label>
+                </a>
+                <input type="hidden" name="trouser_fits" value="bootcut" disabled="disabled">
+            </li>
+            <li>
+                <a class="js-toggle "  data-item-name="loose">
+                    <img src="~/Content/Images/Signup/trousers_loose.jpg">
+                    <label>Loose</label>
+                </a>
+                <input type="hidden" name="trouser_fits" value="loose" disabled="disabled">
+            </li>
+        </ul>
+        <div class="form-actions ">
+            <button type="submit" class="btn btn-default">Next</button>
+            <p class="form-alternative-actions">Already have an account? <a href="https://www.thread.com/signin/existing">Sign in</a></p>
+        </div>
+    </form>
+</div>

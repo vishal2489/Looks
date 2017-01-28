@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Relative';
+    src: url("/media/fonts/relative-web/relative-bold-webfont.a9b0bb4dc591.eot");
+    src: url("/media/fonts/relative-web/relative-bold-webfont.a9b0bb4dc591.eot?#iefix") format('embedded-opentype'),
+         url("/media/fonts/relative-web/relative-bold-webfont.27e9f0fffd77.woff") format('woff'),
+         url("/media/fonts/relative-web/relative-bold-webfont.9eb0fa4d9a72.ttf") format('truetype'),
+         url("/media/fonts/relative-web/relative-bold-webfont.9bb2e0a7093a.svg#relativebold") format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Relative';
+    src: url("/media/fonts/relative-web/relative-bolditalic-webfont.4936ca421952.eot");
+    src: url("/media/fonts/relative-web/relative-bolditalic-webfont.4936ca421952.eot?#iefix") format('embedded-opentype'),
+         url("/media/fonts/relative-web/relative-bolditalic-webfont.81405df3d237.woff") format('woff'),
+         url("/media/fonts/relative-web/relative-bolditalic-webfont.4f22088f7a0e.ttf") format('truetype'),
+         url("/media/fonts/relative-web/relative-bolditalic-webfont.bdbe278a27c2.svg#relativebold_italic") format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Relative';
+    src: url("/media/fonts/relative-web/relative-book-webfont.d6433e96043b.eot");
+    src: url("/media/fonts/relative-web/relative-book-webfont.d6433e96043b.eot?#iefix") format('embedded-opentype'),
+         url("/media/fonts/relative-web/relative-book-webfont.dc697232e30d.woff") format('woff'),
+         url("/media/fonts/relative-web/relative-book-webfont.57b61033c6c9.ttf") format('truetype'),
+         url("/media/fonts/relative-web/relative-book-webfont.5c54c1821032.svg#relativebook") format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Relative';
+    src: url("/media/fonts/relative-web/relative-mediumitalic_-webfont.93766298f69f.eot");
+    src: url("/media/fonts/relative-web/relative-mediumitalic_-webfont.93766298f69f.eot?#iefix") format('embedded-opentype'),
+         url("/media/fonts/relative-web/relative-mediumitalic_-webfont.12d69449e78f.woff") format('woff'),
+         url("/media/fonts/relative-web/relative-mediumitalic_-webfont.273702375359.ttf") format('truetype'),
+         url("/media/fonts/relative-web/relative-mediumitalic_-webfont.131f39917c5d.svg#relativemedium_italic") format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Relative';
+    src: url("/media/fonts/relative-web/relative-medium-webfont.5043d49318cd.eot");
+    src: url("/media/fonts/relative-web/relative-medium-webfont.5043d49318cd.eot?#iefix") format('embedded-opentype'),
+         url("/media/fonts/relative-web/relative-medium-webfont.b503d0f16adc.woff") format('woff'),
+         url("/media/fonts/relative-web/relative-medium-webfont.6d23a6bfd69e.ttf") format('truetype'),
+         url("/media/fonts/relative-web/relative-medium-webfont.f564dde18da1.svg#relativemedium") format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Relative';
+    src: url("/media/fonts/relative-web/relative-bookitalic-webfont.09feac46a818.eot");
+    src: url("/media/fonts/relative-web/relative-bookitalic-webfont.09feac46a818.eot?#iefix") format('embedded-opentype'),
+         url("/media/fonts/relative-web/relative-bookitalic-webfont.50eb60d0e1ea.woff") format('woff'),
+         url("/media/fonts/relative-web/relative-bookitalic-webfont.6550e56b5b67.ttf") format('truetype'),
+         url("/media/fonts/relative-web/relative-bookitalic-webfont.b80ee8d01eaf.svg#relativebook_italic") format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
