@@ -10,7 +10,7 @@
     <title>Welcome to Thread!</title>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
-    <script src="~/Scripts/Signup/widgets.js"></script>
+    @*<script src="~/Scripts/Signup/widgets.js"></script>
     <script src="~/Scripts/Signup/5973920522.js"></script>
     <script src="~/Scripts/Signup/amplitude-2.10.0-min.gz.js"></script>
     <script src="~/Scripts/Signup/bugsnag-3.min.js"></script>
@@ -21,11 +21,19 @@
     <script src="~/Scripts/Signup/hotjar-268516.js"></script>
     <script src="~/Scripts/Signup/ld.js"></script>
     <script src="~/Scripts/Signup/mixpanel-2-latest.min.js"></script>
-    <script src="~/Scripts/Signup/modules-78165ab84a9778a974d61def7b712b5c.js"></script>
+    <script src="~/Scripts/Signup/modules-78165ab84a9778a974d61def7b712b5c.js"></script>*@
     <script src="~/Scripts/Signup/project.js"></script>
-    <script src="~/Scripts/Signup/sdk.js"></script>
-    <script src="~/Scripts/Signup/uwt.js"></script>
+    @*<script src="~/Scripts/Signup/sdk.js"></script>
+    <script src="~/Scripts/Signup/uwt.js"></script>*@
     <script src="~/Scripts/Signup/whitechapel.ed540646662b.js"></script>
+    <script>
+    $(document).ready(function () {
+        $(".js-toggle").click(function () {
+
+            $("a").addClass("selected");
+        });
+    });
+    </script>
     <link href="~/Content/looks.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/whitechapel.css" rel="stylesheet" />
