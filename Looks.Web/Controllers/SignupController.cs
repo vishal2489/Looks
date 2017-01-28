@@ -22,5 +22,17 @@ namespace Looks.Web.Controllers {
         public ActionResult Budget() {
             return View();
         }
+        public ActionResult Brands() {
+            return View();
+        }
+        public ActionResult Email() {
+            return View();
+        }
+        public ActionResult SelfPortrait() {
+            return View();
+        }
+        public ActionResult Weekend() {
+            return View();
+        }
     }
 }

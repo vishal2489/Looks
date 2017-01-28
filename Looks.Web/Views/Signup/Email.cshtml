@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Email";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Where should we send your recommendations?</h4>
+<p class="helper-text">
+    Every Thursday we’ll send you a notification when you’ve got new clothes to check out.
+</p>
+<div class="registration-main">
+    <form class="registration-step-early-email" method="POST" >
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <label for="id_email">
+            Email address:
+        </label>
+        <input type="email" placeholder="you@example.com" name="email" value="" id="id_email" class="field" autofocus="" required="">
+        <div class="form-actions ">
+            <button type="submit" class="btn btn-primary">Next</button>
+            <a href="https://www.thread.com/signup/photos-of-you" class="btn btn-secondary btn-supporting">Do it later</a>
+        </div>
+    </form>
+</div>

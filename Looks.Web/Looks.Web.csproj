@@ -180,6 +180,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Signup\Wildness.cshtml" />
     <Content Include="Views\Signup\Budget.cshtml" />
+    <Content Include="Views\Signup\Brands.cshtml" />
+    <Content Include="Views\Signup\Email.cshtml" />
+    <Content Include="Views\Signup\SelfPortrait.cshtml" />
+    <Content Include="Views\Signup\Weekend.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

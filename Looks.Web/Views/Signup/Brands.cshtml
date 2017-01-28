@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Brands";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>
+    Do you like any brands
+    in particular?
+</h4>
+<p class="helper-text">
+    Your stylist will use these to refine your options and  introduce you to new, similar brands. Choose as many as you&nbsp;like, or&nbsp;skip this&nbsp;step if&nbsp;you&nbsp;don’t&nbsp;know or&nbsp;mind.
+</p>
+
+
+<div class="registration-main">
+
+    <form class="registration-step-brands" method="POST" action="https://www.thread.com/signup/brands">
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <ul class="image-select-group js-brands-list ">
+
+            <li style="">
+                <a class="js-logo ">
+                    <img src="https://d1bwyguot0k3jj.cloudfront.net/yadt/brands.Brand/image/medium/1.png?qH51K8SX&#39" alt="Topman" style="background-image: url(&#39;https://d1bwyguot0k3jj.cloudfront.net/yadt/brands.Brand/image/medium/1.png?qH51K8SX&#39;)">
+                    <input type="hidden" name="brands" value="1" disabled="">
+                </a>
+            </li>
+
+            <li style="">
+                <a class="js-logo ">
+                    <img src="https://d1bwyguot0k3jj.cloudfront.net/yadt/brands.Brand/image/medium/53.png?RDgGGBkj&#3" alt="Levi&#39;s" style="background-image: url(&#39;https://d1bwyguot0k3jj.cloudfront.net/yadt/brands.Brand/image/medium/53.png?RDgGGBkj&#39;)">
+                    <input type="hidden" name="brands" value="53" disabled="">
+                </a>
+            </li>
+
+            <li style="">
+                <a class="js-logo ">
+                    <img src="https://d1bwyguot0k3jj.cloudfront.net/yadt/brands.Brand/image/medium/5.png?Qs23avAS&#39" alt="Selected" style="background-image: url(&#39;https://d1bwyguot0k3jj.cloudfront.net/yadt/brands.Brand/image/medium/5.png?Qs23avAS&#39;)">
+                    <input type="hidden" name="brands" value="5" disabled="">
+                </a>
+            </li>
+
+            <li style="">
+                <a class="js-logo ">
+                    <img src="https://d1bwyguot0k3jj.cloudfront.net/yadt/brands.Brand/image/medium/735.png?NHGVvn88&#39" alt="Zara" style="background-image: url(&#39;https://d1bwyguot0k3jj.cloudfront.net/yadt/brands.Brand/image/medium/735.png?NHGVvn88&#39;)">
+                    <input type="hidden" name="brands" value="735" disabled="">
+                </a>
+            </li>
+        </ul>
+        <button class="btn btn-xs btn-show-all js-show-all" style="display: none;">Show more brands</button>
+        <div class="form-actions ">
+            <button type="submit" class="btn btn-default">Next</button>
+            <a href="https://www.thread.com/signup/shops" class="btn btn-secondary btn-supporting">Skip this step</a>
+        </div>
+    </form>
+</div>

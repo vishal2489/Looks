@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "SelfPortrait";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h4 class="js-photos-step-1">Do you want to upload a few photos&nbsp;of&nbsp;yourself?</h4>
+<h4 class="js-photos-step-2 hidden">Upload a few photos of yourself</h4>
+<p class="helper-text js-photos-step-1">
+    One of the most helpful things for your stylist is the most
+    obvious: actually seeing what you look
+    like. You can either upload&nbsp;a&nbsp;few&nbsp;now or&nbsp;do&nbsp;it&nbsp;later.
+</p>
+<p class="helper-text js-photos-step-2 hidden">
+    Upload a few photos in three or four clicks, and don't worry about quality.
+    The most helpful ones show your full body, and ideally not
+    in group shots.
+</p>
+<p class="helper-text js-photos-step-2 hidden">
+    Only your stylist will see any photos you add, and you can
+    delete them at any time.
+</p>
+
+
+<div class="registration-main">
+
+
+
+    <div class="selected-photos-container">
+        <ul class="current-photos image-group"></ul>
+    </div>
+
+
+    @*<form class="js-upload-form upload-photos-form form"  method="POST" enctype="multipart/form-data">
+
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <input name="image" type="file">
+    </form>*@
+
+    @*<form class="js-done-adding-form done-adding-form" method="POST">
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <button type="submit" class="btn btn-default done-adding-button">Next</button>
+    </form>*@
+
+    <form method="POST" class="js-upload-photos-form">
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+
+        <button type="button" class="js-add-photo-now-fb js-photos-step-2  btn btn-default btn-facebook" data-url="/xhr/signup/photos">Select from Facebook</button>
+
+        <input type="file"   class="js-add-photo-now-upload js-photos-step-2  btn btn-default"/>
+        <div class="form-actions ">
+            @*<button type="button" class="btn btn-primary js-photos-step-1 js-show-photos-step-2">Add photos <span class="">now</span></button>*@
+            <button type="submit" class="btn btn-default done-adding-button">Next</button>
+            <button type="submit" class="btn btn-secondary btn-supporting js-photos-step-1">Do it later</button>
+            
+            @*<button type="submit" class="btn btn-secondary btn-supporting js-photos-step-2  js-skip-button">Skip</button>*@
+        </div>
+    </form>
+
+
+</div>
+
+
