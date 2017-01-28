@@ -18,5 +18,9 @@ namespace Looks.Web.Controllers {
         public ActionResult Wildness() {
             return View();
         }
+
+        public ActionResult Budget() {
+            return View();
+        }
     }
 }

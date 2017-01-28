@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewBag.Title = "Budget";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>How much do you usually spend on&nbsp;these&nbsp;items?</h4>
+<p class="helper-text">
+    Most of the items you'll see on Thread are tailored to you: your preferences, tastes, sizes, existing wardrobe. And&nbsp;importantly, we’ll only show items that match your&nbsp;budget.
+</p>
+
+
+<div class="registration-main">
+
+    <thread-select-buttons name="price-slider">
+        <div data-reactroot="" class="select-buttons">
+            <ul>
+                <li class="">
+                    <label>
+                        <input type="radio" name="price-slider" value="1"><!-- react-text: 6 -->₹₹₹<!-- /react-text -->
+                    </label>
+                </li>
+                <li class="active">
+                    <label>
+                        <input type="radio" name="price-slider" value="2"><!-- react-text: 10 -->₹₹₹₹<!-- /react-text -->
+                    </label>
+                </li>
+                <li class="">
+                    <label>
+                        <input type="radio" name="price-slider" value="3"><!-- react-text: 14 -->₹₹₹₹₹<!-- /react-text -->
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </thread-select-buttons>
+    <p class="section-help">You can adjust your budget individually:</p>
+    <form class="registration-step-price-ranges" method="POST" data-budget-price-map="{&quot;trousers-chinos&quot;: [25, 40, 70, 192.5], &quot;blazers&quot;: [50, 89, 139, 435], &quot;knitwear-sweaters&quot;: [20, 38, 65, 217.5], &quot;t-shirts-polos&quot;: [15, 23, 40, 142.5], &quot;shirts&quot;: [20, 35, 69, 152.5], &quot;shorts&quot;: [15, 29.5, 45, 110], &quot;shoes&quot;: [40, 65, 100, 385], &quot;coats-jackets&quot;: [70, 100, 180, 707.5], &quot;jeans&quot;: [25, 60, 99, 225], &quot;suits&quot;: [70, 145, 250, 795]}">
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <div class="sliders-container">
+            <div class="">
+                <label>Coats &amp; Jackets:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_coats-jackets" name="coats-jackets" value="50" data-min-value="52" data-max-value="1000" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>52</span></div><div class="jslider-label jslider-label-to">₹<span>1,000</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>50</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_coats-jackets" class="logarithmic-range" min="0" max="100" value="52" step="0">
+                    <input type="hidden" class="range-companion" name="coats-jackets" value="98">
+                    <label class="value">
+                        ₹<span class="slider-value">98</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>Blazers:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_blazers" name="blazers" value="40" data-min-value="37" data-max-value="700" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>37</span></div><div class="jslider-label jslider-label-to">₹<span>700</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>40</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_blazers" class="logarithmic-range" min="0" max="100" value="37" step="0">
+                    <input type="hidden" class="range-companion" name="blazers" value="85">
+                    <label class="value">
+                        ₹<span class="slider-value">85</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>Suits:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_suits" name="suits" value="50" data-min-value="52" data-max-value="1000" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>52</span></div><div class="jslider-label jslider-label-to">₹<span>1,000</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>50</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_suits" class="logarithmic-range" min="0" max="100" value="52" step="0">
+                    <input type="hidden" class="range-companion" name="suits" value="145">
+                    <label class="value">
+                        ₹<span class="slider-value">145</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>Knitwear &amp; Sweaters:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_knitwear-sweaters" name="knitwear-sweaters" value="20" data-min-value="15" data-max-value="300" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>15</span></div><div class="jslider-label jslider-label-to">₹<span>300</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>20</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_knitwear-sweaters" class="logarithmic-range" min="0" max="100" value="15" step="0">
+                    <input type="hidden" class="range-companion" name="knitwear-sweaters" value="35">
+                    <label class="value">
+                        ₹<span class="slider-value">35</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>Shirts:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_shirts" name="shirts" value="20" data-min-value="15" data-max-value="200" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>15</span></div><div class="jslider-label jslider-label-to">₹<span>200</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>20</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_shirts" class="logarithmic-range" min="0" max="100" value="15" step="0">
+                    <input type="hidden" class="range-companion" name="shirts" value="35">
+                    <label class="value">
+                        ₹<span class="slider-value">35</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>T-shirts &amp; Polos:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_t-shirts-polos" name="t-shirts-polos" value="10" data-min-value="11" data-max-value="200" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>11</span></div><div class="jslider-label jslider-label-to">₹<span>200</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>10</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_t-shirts-polos" class="logarithmic-range" min="0" max="100" value="11" step="0">
+                    <input type="hidden" class="range-companion" name="t-shirts-polos" value="22">
+                    <label class="value">
+                        ₹<span class="slider-value">22</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>Jeans:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_jeans" name="jeans" value="20" data-min-value="19" data-max-value="300" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>19</span></div><div class="jslider-label jslider-label-to">₹<span>300</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>20</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_jeans" class="logarithmic-range" min="0" max="100" value="19" step="0">
+                    <input type="hidden" class="range-companion" name="jeans" value="60">
+                    <label class="value">
+                        ₹<span class="slider-value">60</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>Trousers &amp; Chinos:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_trousers-chinos" name="trousers-chinos" value="20" data-min-value="19" data-max-value="300" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>19</span></div><div class="jslider-label jslider-label-to">₹<span>300</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>20</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_trousers-chinos" class="logarithmic-range" min="0" max="100" value="19" step="0">
+                    <input type="hidden" class="range-companion" name="trousers-chinos" value="40">
+                    <label class="value">
+                        ₹<span class="slider-value">40</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>Shorts:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_shorts" name="shorts" value="10" data-min-value="11" data-max-value="200" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>11</span></div><div class="jslider-label jslider-label-to">₹<span>200</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>10</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_shorts" class="logarithmic-range" min="0" max="100" value="11" step="0">
+                    <input type="hidden" class="range-companion" name="shorts" value="25">
+                    <label class="value">
+                        ₹<span class="slider-value">25</span>
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <label>Shoes:</label>
+
+                <div class="legacy-slider">
+                    <input type="slider" id="id_shoes" name="shoes" value="30" data-min-value="30" data-max-value="500" style="display: none;"><span class="jslider jslider_plastic jslider-single"><table><tbody><tr><td><div class="jslider-bg"><i class="l"></i><i class="f"></i><i class="r"></i><i class="v"></i></div><div class="jslider-pointer" style="left: 0%;"></div><div class="jslider-pointer jslider-pointer-to"></div><div class="jslider-label"><span>30</span></div><div class="jslider-label jslider-label-to">₹<span>500</span></div><div class="jslider-value" style="left: 0%; margin-left: 0px; right: auto;">₹<span>30</span></div><div class="jslider-value jslider-value-to">₹<span></span></div><div class="jslider-scale"></div></td></tr></tbody></table></span>
+                </div>
+                <div class="slider">
+
+                    <input type="range" id="id_shoes" class="logarithmic-range" min="0" max="100" value="30" step="0">
+                    <input type="hidden" class="range-companion" name="shoes" value="60">
+                    <label class="value">
+                        ₹<span class="slider-value">60</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-actions ">
+            <input type="submit" class="btn btn-primary" value="Next">
+        </div>
+    </form>
+</div>
