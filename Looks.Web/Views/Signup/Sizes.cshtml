@@ -1,0 +1,229 @@
+﻿
+@{
+    ViewBag.Title = "Sizes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>What sizes do you wear?</h4>
+<p class="helper-text">
+    This will (obviously) help your stylist recommend&nbsp;clothes&nbsp;that'll&nbsp;fit.
+</p>
+<div class="registration-main">
+    <form class="registration-step-sizes" method="POST">
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <label>Tops:</label>
+        <div class="segmented-control js-segmented-control">
+            <ul>
+
+                <li class="hidden">
+                    <label for="dont_know" class="checked">
+                        <input type="radio" name="tops" value="dont_know" checked="">
+                        I DON'T KNOW
+                    </label>
+                </li>
+
+                <li>
+                    <label for="xxs">
+                        <input type="radio" name="tops" value="xxs">
+                        XXS
+                    </label>
+                </li>
+
+                <li>
+                    <label for="xs">
+                        <input type="radio" name="tops" value="xs">
+                        XS
+                    </label>
+                </li>
+
+                <li>
+                    <label for="s">
+                        <input type="radio" name="tops" value="s">
+                        S
+                    </label>
+                </li>
+
+                <li>
+                    <label for="m">
+                        <input type="radio" name="tops" value="m">
+                        M
+                    </label>
+                </li>
+
+                <li>
+                    <label for="l">
+                        <input type="radio" name="tops" value="l">
+                        L
+                    </label>
+                </li>
+
+                <li>
+                    <label for="xl">
+                        <input type="radio" name="tops" value="xl">
+                        XL
+                    </label>
+                </li>
+
+                <li>
+                    <label for="xxl">
+                        <input type="radio" name="tops" value="xxl">
+                        XXL
+                    </label>
+                </li>
+
+            </ul>
+        </div>
+        <label>Waist size:</label>
+        <select id="id_bottoms_waist" name="bottoms_waist">
+            <option value="dont_know">I don't know</option>
+            <option value="W26">26"</option>
+            <option value="W28">28"</option>
+            <option value="W29">29"</option>
+            <option value="W30">30"</option>
+            <option value="W31">31"</option>
+            <option value="W32">32"</option>
+            <option value="W33">33"</option>
+            <option value="W34">34"</option>
+            <option value="W35">35"</option>
+            <option value="W36">36"</option>
+            <option value="W37">37"</option>
+            <option value="W38">38"</option>
+            <option value="W40">40"</option>
+        </select>
+        <label>Leg size:</label>
+        <ul id="id_bottoms_length">
+            <li><label for="id_bottoms_length_0"><input id="id_bottoms_length_0" name="bottoms_length" type="checkbox" value="L30"> Short 30"</label></li>
+            <li><label for="id_bottoms_length_1"><input id="id_bottoms_length_1" name="bottoms_length" type="checkbox" value="L32"> Regular 32"</label></li>
+            <li><label for="id_bottoms_length_2"><input id="id_bottoms_length_2" name="bottoms_length" type="checkbox" value="L34"> Long 34"</label></li>
+        </ul>
+        <small>
+            If you're between leg lengths, feel free to select multiple sizes. If you’re not sure, go for “Regular”.
+        </small>
+        <label>Shoe size:</label>
+        <select id="id_shoes" name="shoes">
+            <option value="dont_know">I don't know</option>
+            <option value="uk6">UK 6 - US 7 - EU 40</option>
+            <option value="uk7">UK 7 - US 8 - EU 41</option>
+            <option value="uk8">UK 8 - US 9 - EU 42</option>
+            <option value="uk9">UK 9 - US 10 - EU 43</option>
+            <option value="uk10">UK 10 - US 11 - EU 44.5</option>
+            <option value="uk11">UK 11 - US 12 - EU 45.5</option>
+            <option value="uk12">UK 12 - US 13 - EU 47</option>
+        </select>
+        <label>Jacket size:</label>
+        <select id="id_jackets" name="jackets">
+            <option value="dont_know">I don't know</option>
+            <option value="xxs">XXS 32-34</option>
+            <option value="xs">XS 34-36</option>
+            <option value="s">S 36-38</option>
+            <option value="m">M 38-40</option>
+            <option value="l">L 40-42</option>
+            <option value="xl">XL 42-44</option>
+            <option value="xxl">XXL 44-46</option>
+        </select>
+        <label>Shirt collar:</label>
+        <select id="id_shirt_collar" name="shirt_collar">
+            <option value="dont_know">I don't know</option>
+            <option value="x14">14</option>
+            <option value="x145">14.5</option>
+            <option value="x15">15</option>
+            <option value="x155">15.5</option>
+            <option value="x16">16</option>
+            <option value="x165">16.5</option>
+            <option value="x17">17</option>
+            <option value="x175">17.5</option>
+            <option value="x18">18</option>
+            <option value="x185">18.5</option>
+            <option value="x19">19</option>
+            <option value="x195">19.5</option>
+            <option value="x20">20</option>
+        </select>
+        <label>Special Features:</label>
+        <div class="size-scenarios-container">
+            <ul class="image-select-group image-select-group-with-labels image-select-group-with-outer-borders">
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="broad_shoulders">
+                        <img src="../Content/Images/Signup/Sizes/broad_shoulders.png">
+                        <label>Broad shoulders</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="broad_chest">
+                        <img src="../Content/Images/Signup/Sizes/icon_broad_chest.png">
+                        <label>Broad chest</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="long_arms">
+                        <img src="../Content/Images/Signup/Sizes/long_arms.png">
+                        <label>Long arms</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="long_legs">
+                        <img src="../Content/Images/Signup/Sizes/long_legs.png">
+                        <label>Long legs</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="short_legs">
+                        <img src="../Content/Images/Signup/Sizes/short_legs.png">
+                        <label>Short legs</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="muscular_thighs">
+                        <img src="../Content/Images/Signup/Sizes/muscular_thighs.png">
+                        <label>Muscular thighs</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="big_around_the_middle">
+                        <img src="../Content/Images/Signup/Sizes/big_around_the_middle.png">
+                        <label>Bigger around the middle</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="very_slim">
+                        <img src="../Content/Images/Signup/Sizes/very_slim.png">
+                        <label>Very slim</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="js-multiple-choice" data-form-target="#id_size_scenarios" data-form-value="between_sizes">
+                        <img src="../Content/Images/Signup/Sizes/between_sizes.png">
+                        <label>Between sizes</label>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="hidden">
+            <select multiple="multiple" id="id_size_scenarios" name="size_scenarios">
+                <option value="broad_shoulders">Broad shoulders</option>
+                <option value="broad_chest">Broad chest</option>
+                <option value="long_arms">Long arms</option>
+                <option value="long_legs">Long legs</option>
+                <option value="short_legs">Short legs</option>
+                <option value="muscular_thighs">Muscular thighs</option>
+                <option value="big_around_the_middle">Bigger around the middle</option>
+                <option value="very_slim">Very slim</option>
+                <option value="between_sizes">Between sizes</option>
+            </select>
+        </div>
+        <div class="form-actions ">
+            <button type="submit" data-allow-empty="" class="btn btn-primary">Next</button>
+        </div>
+    </form>
+
+
+</div>

@@ -34,5 +34,14 @@ namespace Looks.Web.Controllers {
         public ActionResult Weekend() {
             return View();
         }
+        public ActionResult Work() {
+            return View();
+        }
+        public ActionResult Date() {
+            return View();
+        }
+        public ActionResult Sizes() {
+            return View();
+        }
     }
 }
