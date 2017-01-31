@@ -43,5 +43,15 @@ namespace Looks.Web.Controllers {
         public ActionResult Sizes() {
             return View();
         }
+        public ActionResult Wanted() {
+            return View();
+        }
+        public ActionResult Owned() {
+            return View();
+        }
+public ActionResult Appearance() {
+            return View();
+        }
+
     }
 }

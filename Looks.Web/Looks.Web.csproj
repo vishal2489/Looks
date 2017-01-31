@@ -331,6 +331,9 @@
     <Content Include="Views\Signup\Work.cshtml" />
     <Content Include="Views\Signup\Date.cshtml" />
     <Content Include="Views\Signup\Sizes.cshtml" />
+    <Content Include="Views\Signup\Wanted.cshtml" />
+    <Content Include="Views\Signup\Owned.cshtml" />
+    <Content Include="Views\Signup\Appearance.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

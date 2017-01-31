@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "Appearance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h4>
+    Can you tell us a bit more about your appearance?
+</h4>
+<p class="helper-text">
+    Your hair, skin and eye colour affect what colour
+    clothes suit you.
+</p>
+
+
+<div class="registration-main">
+
+
+
+    <form class="action registration-step-appearance" method="POST">
+        <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <div class="form-group">
+            <label for="id_hair">Hair:</label>
+            <select id="id_hair" name="hair">
+                <option disabled="" selected="">Please select a hair colour</option>
+
+
+
+
+                <option value="black">Black</option>
+
+
+
+                <option value="dark_brown">Dark Brown</option>
+
+
+
+                <option value="light_brown">Light Brown</option>
+
+
+
+                <option value="blonde">Blonde</option>
+
+
+
+                <option value="auburn">Auburn</option>
+
+
+
+                <option value="ginger">Ginger</option>
+
+
+
+                <option value="grey">Grey</option>
+
+
+
+                <option value="white">White</option>
+
+
+
+                <option value="no_hair">No hair</option>
+
+
+
+                <option value="other">Other</option>
+
+
+            </select>
+
+        </div>
+        <div class="form-group">
+            <label for="id_skin_colour">Skin colour:</label>
+            <select id="id_skin_colour" name="skin_colour">
+                <option disabled="" selected="">Please select a skin colour</option>
+
+
+
+
+                <option value="black">Black</option>
+
+
+
+                <option value="brown">Brown</option>
+
+
+
+                <option value="olive">Olive</option>
+
+
+
+                <option value="tanned">Tanned</option>
+
+
+
+                <option value="white_with_freckles">White with freckles</option>
+
+
+
+                <option value="white_with_no_freckles">White with no freckles</option>
+
+
+
+                <option value="other">Other</option>
+
+
+            </select>
+
+        </div>
+        <div class="form-group">
+            <label for="id_eye_colour">Eye colour:</label>
+            <select id="id_eye_colour" name="eye_colour">
+                <option disabled="" selected="">Please select an Eye colour</option>
+
+
+
+
+                <option value="green">Green</option>
+
+
+
+                <option value="hazel">Hazel</option>
+
+
+
+                <option value="brown">Brown</option>
+
+
+
+                <option value="blue">Blue</option>
+
+
+
+                <option value="grey">Grey</option>
+
+
+
+                <option value="other">Other</option>
+
+
+            </select>
+
+        </div>
+        <div class="form-actions">
+            <input type="submit" class="btn btn-primary" value="Next">
+        </div>
+    </form>
+
+</div>
+
+
