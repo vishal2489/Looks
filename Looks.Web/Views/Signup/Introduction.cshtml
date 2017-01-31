@@ -4,13 +4,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<script type="text/javascript">
+    $('#id_next').click(function () {
+        document.location = '@Url.Action("SignUp", "Trouser")';
+    });
+</script>
 
 <h4>
     Dress well without the hassle
 </h4>
 <div class="registration-main">
-    <form method="POST">
         <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
         <img class="copy-supporting-image" src="~/Content/Images/Signup/chinos_chair.jpg" alt="Man sitting on chair using his phone wearing chinos and brown shoes">
 
@@ -24,9 +27,8 @@
         </p>
 
         <div class="form-actions">
-            <button type="submit"  class="btn btn-primary">Next</button>
+            <button id="id_next" type="submit"  class="btn btn-primary">Next</button>
             <p class="form-alternative-actions">Already have an account? <a href="">Sign in</a></p>
         </div>
-    </form>
 </div>
 

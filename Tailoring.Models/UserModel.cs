@@ -1,16 +1,19 @@
 using System.Collections.Generic;
 
-namespace Looks.Web.Models {
-    public class User {
-        
-        
-
-        
-        
-        
-        
-        
-
+namespace Looks.Models {
+    public class UserModel: EntityBase {
+        public UserModel() {
+            PersonalInfo = new PersonalInformation();
+            Fittings = new FittingInformation();
+            SocialInfo = new SocialInformation();
+            StyleInfo = new StyleInformation();
+            BudgetInfo = new Budget();
+        }
+        public PersonalInformation PersonalInfo { get; set; }
+        public FittingInformation Fittings { get; set; }
+        public SocialInformation SocialInfo { get; set; }
+        public StyleInformation StyleInfo { get; set; }
+        public Budget BudgetInfo { get; set; }
     }
 
     public enum WildNess {
@@ -28,16 +31,54 @@ namespace Looks.Web.Models {
         public string SelfPictureUrl { get; set; }
 
     }
+
     public class FittingInformation {
-        public List<string> TrouserFiting { get; set; }
+        public FittingInformation() {
+            TrouserFitType = new FittingType();
+        }
+        public FittingType TrouserFitType { get; set; } //slim, regular
+        public string TopSize { get; set; }
+        public short WaistSize { get; set; }
+        public short LegLenght { get; set; }
+        public short ShoeSize { get; set; }
+        public short JacketSize { get; set; }
+        public BodyFeature SpecialFeature { get; set; }
+
     }
+
+    public enum BodyFeature {
+        BroadSholders,
+        BroadChest,
+        LongArms,
+        LongLegs,
+        ShortLegs,
+        MuscularThighs,
+        Tammy,
+        VerySlim,
+        BetweenSizes
+    }
+
     public class SocialInformation {
         public string FacebookUrl { get; set; }
         public string InstagramUrl { get; set; }
         public string LinkdinUrl { get; set; }
     }
-
+    public class FittingType {
+        public bool IsSlim { get; set; }
+        public bool IsSkinny { get; set; }
+        public bool IsRegular { get; set; }
+        public bool IsBootcut { get; set; }
+        public bool IsLoose { get; set; }
+    }
     public class StyleInformation {
+        public StyleInformation() {
+            WeekendStyles = new List<Style>();
+            WorkStyles = new List<Style>();
+            WantedItems = new List<Style>();
+            OwnedItems = new List<Style>();
+            Brands = new List<string>();
+            Budget = new Budget();
+        }
         public WildNess WildNess { get; set; }
         public List<Style> WeekendStyles { get; set; }
         public List<Style> WorkStyles { get; set; }
@@ -48,6 +89,10 @@ namespace Looks.Web.Models {
     }
 
     public class Style {
+        public Style() {
+            Colors = new List<string>();
+            Tags = new List<string>();
+        }
         public string ImageUrl { get; set; }
         public bool IsLiked { get; set; }
         public string Description { get; set; }

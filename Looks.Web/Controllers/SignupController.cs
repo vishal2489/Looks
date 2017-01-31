@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Looks.Models;
 
 namespace Looks.Web.Controllers {
     public class SignupController: Controller {
@@ -12,7 +13,12 @@ namespace Looks.Web.Controllers {
         }
 
         public ActionResult Trouser() {
-            return View();
+            var model = new FittingType();
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Trouser(FittingType model) {
+            return RedirectToAction("Wildness");
         }
 
         public ActionResult Wildness() {
@@ -49,7 +55,7 @@ namespace Looks.Web.Controllers {
         public ActionResult Owned() {
             return View();
         }
-public ActionResult Appearance() {
+        public ActionResult Appearance() {
             return View();
         }
 

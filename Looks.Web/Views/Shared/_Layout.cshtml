@@ -2,43 +2,50 @@
 <html>
 <head>
     @*<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>*@
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>*@
     <title>Welcome to Thread!</title>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
-    @*<script src="~/Scripts/Signup/widgets.js"></script>
-    <script src="~/Scripts/Signup/5973920522.js"></script>
-    <script src="~/Scripts/Signup/amplitude-2.10.0-min.gz.js"></script>
-    <script src="~/Scripts/Signup/bugsnag-3.min.js"></script>
-    <script src="~/Scripts/Signup/bundle.7ab1724ec071.js"></script>
-    <script src="~/Scripts/Signup/conversion_async.js"></script>
-    <script src="~/Scripts/Signup/fbds.js"></script>
-    <script src="~/Scripts/Signup/gtm.js"></script>
-    <script src="~/Scripts/Signup/hotjar-268516.js"></script>
-    <script src="~/Scripts/Signup/ld.js"></script>
-    <script src="~/Scripts/Signup/mixpanel-2-latest.min.js"></script>
-    <script src="~/Scripts/Signup/modules-78165ab84a9778a974d61def7b712b5c.js"></script>*@
+    <script src="~/scripts/signup/widgets.js"></script>
+    <script src="~/scripts/signup/5973920522.js"></script>
+    <script src="~/scripts/signup/amplitude-2.10.0-min.gz.js"></script>
+    <script src="~/scripts/signup/bugsnag-3.min.js"></script>
+    <script src="~/scripts/signup/bundle.7ab1724ec071.js"></script>
+    <script src="~/scripts/signup/conversion_async.js"></script>
+    <script src="~/scripts/signup/fbds.js"></script>
+    <script src="~/scripts/signup/gtm.js"></script>
+    <script src="~/scripts/signup/hotjar-268516.js"></script>
+    <script src="~/scripts/signup/ld.js"></script>
+    <script src="~/scripts/signup/mixpanel-2-latest.min.js"></script>
+    <script src="~/scripts/signup/modules-78165ab84a9778a974d61def7b712b5c.js"></script>
     <script src="~/Scripts/Signup/project.js"></script>
     @*<script src="~/Scripts/Signup/sdk.js"></script>
-    <script src="~/Scripts/Signup/uwt.js"></script>*@
+        <script src="~/Scripts/Signup/uwt.js"></script>*@
     <script src="~/Scripts/Signup/whitechapel.ed540646662b.js"></script>
     <script>
-    $(document).ready(function () {
-        $(".js-toggle").click(function () {
-
-            $("a").addClass("selected");
+        $(document).ready(function () {
+            $(".js-toggle").click(function () {
+                if ($(this).hasClass("selected")) {
+                    $(this).removeClass("selected");
+                    $('input[name='+$(this).data("item-name")+')]').val('False');
+                    
+                } else {
+                    $(this).addClass("selected");
+                    alert($('input[name='+$(this).data("item-name")+')]').val());
+                    $('input[name='+$(this).data("item-name")+')]').val('True');
+                }
+            });
         });
-    });
     </script>
     <link href="~/Content/looks.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/whitechapel.css" rel="stylesheet" />
     @*<link rel="stylesheet" type="text/css" href="./Introduction_files/stylesheet.421dd82fc80f.css">
-    <link href="./Introduction_files/whitechapel.867b91be88b6.css" rel="stylesheet" media="screen">*@
+        <link href="./Introduction_files/whitechapel.867b91be88b6.css" rel="stylesheet" media="screen">*@
     <style>
         body.tablesorter-disableSelection {
             -ms-user-select: none;

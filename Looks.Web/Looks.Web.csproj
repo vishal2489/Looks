@@ -334,6 +334,7 @@
     <Content Include="Views\Signup\Wanted.cshtml" />
     <Content Include="Views\Signup\Owned.cshtml" />
     <Content Include="Views\Signup\Appearance.cshtml" />
+    <Content Include="Views\Home\View.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -344,6 +345,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tailoring.Models\Looks.Models.csproj">
+      <Project>{1D1EECD2-2DA0-440E-9F01-573EB88B95DF}</Project>
+      <Name>Looks.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
