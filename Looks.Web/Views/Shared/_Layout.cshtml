@@ -26,21 +26,7 @@
     @*<script src="~/Scripts/Signup/sdk.js"></script>
         <script src="~/Scripts/Signup/uwt.js"></script>*@
     <script src="~/Scripts/Signup/whitechapel.ed540646662b.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".js-toggle").click(function () {
-                if ($(this).hasClass("selected")) {
-                    $(this).removeClass("selected");
-                    $('input[name='+$(this).data("item-name")+')]').val('False');
-                    
-                } else {
-                    $(this).addClass("selected");
-                    alert($('input[name='+$(this).data("item-name")+')]').val());
-                    $('input[name='+$(this).data("item-name")+')]').val('True');
-                }
-            });
-        });
-    </script>
+   
     <link href="~/Content/looks.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/whitechapel.css" rel="stylesheet" />

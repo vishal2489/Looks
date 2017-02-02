@@ -16,13 +16,17 @@ namespace Looks.Web.Controllers {
             var model = new FittingType();
             return View(model);
         }
+        public ActionResult TestView() {
+            var model = new FittingType();
+            return View(model);
+        }
         [HttpPost]
         public ActionResult Trouser(FittingType model) {
             return RedirectToAction("Wildness");
         }
 
         public ActionResult Wildness() {
-            return View();
+            return View(new StyleInformation());
         }
 
         public ActionResult Budget() {

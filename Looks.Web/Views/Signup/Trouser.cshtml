@@ -4,7 +4,20 @@
     ViewBag.Title = "Trouser";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+    $(document).ready(function () {
+        $(".js-toggle").click(function () {
+            if ($(this).hasClass("selected")) {
+                $(this).removeClass("selected");
+                $('#' + $(this).data("item-name")).val('False');
 
+            } else {
+                $(this).addClass("selected");
+                $('#' + $(this).data("item-name")).val('True');
+            }
+        });
+    });
+</script>
 
 <h4>First up: Which trouser fits do&nbsp;you&nbsp;like best?</h4>
 <p class="helper-text">
@@ -15,44 +28,39 @@
         <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
         <ul class="image-select-group image-select-group-with-labels ">
             <li>
-                <a class="js-toggle " data-item-name="IsSkinny">
+                <a class="js-toggle" data-item-name="IsSkinny">
                     <img src="~/Content/Images/Signup/trousers_skinny.jpg">
                     <label>Skinny</label>
                 </a>
-                @Html.HiddenFor(m => m.IsSkinny);
-                @*<input type="hidden" name="trouser_fits" value="skinny" disabled="disabled">*@
+                <input data-val="true" id="IsSkinny" name="IsSkinny" type="hidden" value="False">
             </li>
             <li>
                 <a class="js-toggle" data-item-name="IsSlim">
                     <img src="~/Content/Images/Signup/trousers_slim.jpg">
                     <label>Slim</label>
                 </a>
-                @Html.HiddenFor(m => m.IsSlim);
-                @*<input type="hidden" name="trouser_fits" value="slim" disabled="disabled">*@
+                <input data-val="true" id="IsSlim" name="IsSlim" type="hidden" value="False">
             </li>
             <li>
                 <a class="js-toggle " data-item-name="IsRegular">
                     <img src="~/Content/Images/Signup/trousers_straight_regular.jpg">
                     <label>Straight/Regular</label>
                 </a>
-                @Html.HiddenFor(m => m.IsRegular);
-                @*<input type="hidden" name="trouser_fits" value="straight_regular" disabled="disabled">*@
+                <input data-val="true" id="IsRegular" name="IsRegular" type="hidden" value="False">
             </li>
             <li>
                 <a class="js-toggle " data-item-name="IsBootcut">
                     <img src="~/Content/Images/Signup/trousers_bootcut.jpg">
                     <label>Bootcut</label>
                 </a>
-                @Html.HiddenFor(m => m.IsBootcut);
-                @*<input type="hidden" name="trouser_fits" value="bootcut" disabled="disabled">*@
+                <input data-val="true" id="IsBootcut" name="IsBootcut" type="hidden" value="False">
             </li>
             <li>
                 <a class="js-toggle " data-item-name="IsLoose">
                     <img src="~/Content/Images/Signup/trousers_loose.jpg">
                     <label>Loose</label>
                 </a>
-                @Html.HiddenFor(m => m.IsLoose);
-                @*<input type="hidden" name="trouser_fits" value="loose" disabled="disabled">*@
+                <input data-val="true" id="IsLoose" name="IsLoose" type="hidden" value="False">
             </li>
         </ul>
         <div class="form-actions ">
