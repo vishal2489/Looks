@@ -1,35 +1,37 @@
 ﻿@model Looks.Models.StyleInformation
 
-    @{
-        ViewBag.Title = "Wildness";
-        Layout = "~/Views/Shared/_Layout.cshtml";
-    }
+@{
+    ViewBag.Title = "Wildness";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+        $("label").click(function () {
+            $("label").removeClass("checked");
+            $(this).addClass("checked");
+        });
+    });
+</script>
+
+<h4>
+    How open are you to trying slightly more daring clothes?
+</h4>
+<p class="helper-text">
+    We're talking floral shirts or blazers with shorts – nothing&nbsp;too&nbsp;crazy.
+</p>
 
 
-    <h4>
-        How open are you to trying slightly more daring clothes?
-    </h4>
-    <p class="helper-text">
-        We're talking floral shirts or blazers with shorts – nothing&nbsp;too&nbsp;crazy.
-    </p>
-
-
-    <div class="registration-main">
-        <form class="registration-step-wildness js-options-form options-form" method="POST">
-
-            <ul id="id_wildness">
-                <li>
-                    @Html.RadioButtonFor(x => x.WildNess, WildNess.NotReally)
-                    @*<label for="id_wildness_0">
-                        <input id="id_wildness_0" name="wildness" type="radio" value="not_really"> Not really into that
-                    </label>*@
-                </li>
-                <li><label for="id_wildness_1"><input id="id_wildness_1" name="wildness" type="radio" value="a_bit"> A bit open to it</label></li>
-                <li><label for="id_wildness_2"><input id="id_wildness_2" name="wildness" type="radio" value="open"> Open to it</label></li>
-                <li><label for="id_wildness_3"><input id="id_wildness_3" name="wildness" type="radio" value="very_open"> Very open to it</label></li>
-            </ul>
-            <div class="form-actions ">
-                <button type="submit" class="btn btn-default">Next</button>
-            </div>
-        </form>
-    </div>
+<div class="registration-main">
+    <form class="registration-step-wildness js-options-form options-form" method="POST">
+        <ul id="id_wildness">
+            <li><label>@Html.RadioButtonFor(x => x.WildNess, Looks.Models.WildNess.NotReally) Not really into that</label></li>
+            <li><label>@Html.RadioButtonFor(x => x.WildNess, Looks.Models.WildNess.ABitOpen) A bit open toit</label></li>
+            <li><label>@Html.RadioButtonFor(x => x.WildNess, Looks.Models.WildNess.Open) Open to it</label></li>
+            <li><label>@Html.RadioButtonFor(x => x.WildNess, Looks.Models.WildNess.VeryOpen) Very open to it</label></li>
+        </ul>
+        <div class="form-actions ">
+            <button type="submit" class="btn btn-default">Next</button>
+        </div>
+    </form>
+</div>

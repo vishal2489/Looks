@@ -110,7 +110,7 @@ namespace Looks.Models {
         public int TShirts { get; set; }
         public int Jeans { get; set; }
         public int TrousersChinos { get; set; }
-        public int shorts { get; set; }
+        public int Shorts { get; set; }
         public int Shoes { get; set; }
 
     }

@@ -29,8 +29,16 @@ namespace Looks.Web.Controllers {
             return View(new StyleInformation());
         }
 
+        [HttpPost]
+        public ActionResult Wildness(StyleInformation info) {
+            return RedirectToAction("Budget");
+        }
         public ActionResult Budget() {
             return View();
+        }
+        [HttpPost]
+        public ActionResult Budget(Budget model) {
+            return RedirectToAction("Brands");
         }
         public ActionResult Brands() {
             return View();
