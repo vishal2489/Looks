@@ -53,7 +53,7 @@ namespace Looks.Web.Controllers {
         }
         [HttpPost]
         public ActionResult Brands(List<Brand> brands) {
-            return RedirectToAction("Email");
+            return RedirectToAction("Weekend");
         }
 
         public ActionResult Email() {
@@ -63,7 +63,18 @@ namespace Looks.Web.Controllers {
             return View();
         }
         public ActionResult Weekend() {
-            return View();
+            var weekendStyle = new List<Style>();
+            for (int i = 1; i < 45; i++) {
+                weekendStyle.Add(new Style() {
+                    Description = i.ToString(),
+                    ImageUrl = $"../Content/Images/Signup/Stlyes/{i.ToString()}.jpeg"
+                });
+            }
+            return View(weekendStyle);
+        }
+        [HttpPost]
+        public ActionResult Weekend(List<Style> styles) {
+           return RedirectToAction("Work");
         }
         public ActionResult Work() {
             return View();

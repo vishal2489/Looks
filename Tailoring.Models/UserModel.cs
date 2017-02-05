@@ -103,6 +103,7 @@ namespace Looks.Models {
         }
         public string ImageUrl { get; set; }
         public bool IsLiked { get; set; }
+        public bool IsSelected { get; set; }
         public string Description { get; set; }
         public string Theme { get; set; }
         public List<string> Colors { get; set; }
