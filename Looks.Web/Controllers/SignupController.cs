@@ -41,8 +41,21 @@ namespace Looks.Web.Controllers {
             return RedirectToAction("Brands");
         }
         public ActionResult Brands() {
-            return View();
+            var brands = new List<Brand>();
+            //test data
+            brands.Add(new Brand() { Name = "Lee-Cooper", LogoURL = "../Content/Images/Signup/Brands/LEE-COOPER.jpg" });
+            brands.Add(new Brand() { Name = "Lee", LogoURL = "../Content/Images/Signup/Brands/LEE.png" });
+            brands.Add(new Brand() { Name = "Levis", LogoURL = "../Content/Images/Signup/Brands/LEVIS.png" });
+            brands.Add(new Brand() { Name = "Louis-Philipee", LogoURL = "../Content/Images/Signup/Brands/LOUIS-PHILIPPE.png" });
+            brands.Add(new Brand() { Name = "Peter-England", LogoURL = "../Content/Images/Signup/Brands/PETER-ENGLAND.png" });
+            brands.Add(new Brand() { Name = "Spykar", LogoURL = "../Content/Images/Signup/Brands/SPYKAR.png" });
+            return View(brands);
         }
+        [HttpPost]
+        public ActionResult Brands(List<Brand> brands) {
+            return RedirectToAction("Email");
+        }
+
         public ActionResult Email() {
             return View();
         }

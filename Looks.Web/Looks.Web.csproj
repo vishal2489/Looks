@@ -119,6 +119,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Signup\Brands\LEE-COOPER.jpg" />
+    <Content Include="Content\Images\Signup\Brands\LEE.png" />
+    <Content Include="Content\Images\Signup\Brands\LEVIS.png" />
+    <Content Include="Content\Images\Signup\Brands\LOUIS-PHILIPPE.png" />
+    <Content Include="Content\Images\Signup\Brands\PETER-ENGLAND.png" />
+    <Content Include="Content\Images\Signup\Brands\SPYKAR.png" />
     <Content Include="Content\Images\Signup\chinos_chair.jpg" />
     <Content Include="Content\Images\Signup\Sizes\between_sizes.png" />
     <Content Include="Content\Images\Signup\Sizes\big_around_the_middle.png" />

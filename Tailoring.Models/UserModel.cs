@@ -76,16 +76,24 @@ namespace Looks.Models {
             WorkStyles = new List<Style>();
             WantedItems = new List<Style>();
             OwnedItems = new List<Style>();
-            Brands = new List<string>();
+            Brands = new List<Brand>();
             Budget = new Budget();
+
+            
         }
         public WildNess WildNess { get; set; }
         public List<Style> WeekendStyles { get; set; }
         public List<Style> WorkStyles { get; set; }
         public List<Style> WantedItems { get; set; }
         public List<Style> OwnedItems { get; set; }
-        public List<string> Brands { get; set; }
+        public List<Brand> Brands { get; set; }
         public Budget Budget { get; set; }
+    }
+
+    public class Brand {
+        public string Name { get; set; }
+        public string LogoURL { get; set; }
+        public bool IsSelected { get; set; }
     }
 
     public class Style {
