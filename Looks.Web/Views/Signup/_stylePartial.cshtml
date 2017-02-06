@@ -1,0 +1,28 @@
+﻿@model List<Looks.Models.Style>
+<script>
+    $(document).ready(function () {
+        $(".js-photo-toggle").click(function () {
+            if ($(this).hasClass("selected")) {
+                $(this).removeClass("selected");
+                $(this).find("input").val('False');
+                //$('#' + $(this).data("item-name")).val('False');
+
+            } else {
+                $(this).addClass("selected");
+                $(this).find("input").val('True');
+                //$('#' + $(this).data("item-name")).val('True');
+            }
+        });
+    });
+</script>
+<ul class="js-style-photos-container image-select-group " data-min-photos="1" data-max-photos="20">
+    @for (int i = 0; i < Model.Count; i++) {
+        <li>
+            <a class="js-photo-toggle" data-item-name="[@i].IsSelected">
+                <img src=@Model[i].ImageUrl alt=Model[@i].Description />
+                <input id=[@i].IsSelected name="[@i].IsSelected" type="hidden" value="False" />
+            </a>
+        </li>
+    }
+</ul>
+

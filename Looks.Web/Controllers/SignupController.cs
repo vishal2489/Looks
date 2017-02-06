@@ -77,10 +77,32 @@ namespace Looks.Web.Controllers {
            return RedirectToAction("Work");
         }
         public ActionResult Work() {
-            return View();
+            var workStyle = new List<Style>();
+            for (int i = 101; i <= 145; i++) {
+                workStyle.Add(new Style() {
+                    Description = i.ToString(),
+                    ImageUrl = $"../Content/Images/Signup/Stlyes/{i.ToString()}.jpeg"
+                });
+            }
+            return View(workStyle);
+        }
+        [HttpPost]
+        public ActionResult Work(List<Style> styles) {
+            return RedirectToAction("Date");
         }
         public ActionResult Date() {
-            return View();
+            var dateStyle = new List<Style>();
+            for (int i = 201; i <= 245; i++) {
+                dateStyle.Add(new Style() {
+                    Description = i.ToString(),
+                    ImageUrl = $"../Content/Images/Signup/Stlyes/{i.ToString()}.jpeg"
+                });
+            }
+            return View(dateStyle);
+        }
+        [HttpPost]
+        public ActionResult Date(List<Style> styles) {
+            return RedirectToAction("Sizes");
         }
         public ActionResult Sizes() {
             return View();

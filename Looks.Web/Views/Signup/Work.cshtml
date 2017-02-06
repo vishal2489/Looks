@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Looks.Models.Style>
 @{
     ViewBag.Title = "Work";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -14,25 +14,15 @@
 </p>
 <div class="registration-main">
     <div class="registration-step-style-photos" data-occasion="work">
-        <ul class="js-style-photos-container image-select-group " data-min-photos="1" data-max-photos="20">
-            @for (int i = 101; i < 146; i++) {
-                var path = "../Content/Images/Signup/Stlyes/" + i.ToString() + ".jpeg";
-                <li>
-                    <a class="js-photo-toggle ">
-                        <img src=@path alt="">
-                    </a>
-                </li>
-            }
-        </ul>
-        <div class="form-actions ">
-            <form method="POST">
-                <input type="hidden" name="csrfmiddlewaretoken" value="TbxwyzHc36vvz6KUTb6cdNHxsG2njCaB">
+        <form method="POST">
+            @Html.Partial("_stylePartial", Model)
+            <div class="form-actions ">
 
                 <p class="helper-text">Select at least 1 to continue</p>
                 <br>
-                <button type="submit" class="btn js-next btn-primary btn-disabled">Next</button>
-            </form>
-        </div>
+                <button type="submit" class="btn js-next btn-primary ">Next</button>
+            </div>
+        </form>
     </div>
 
 </div>

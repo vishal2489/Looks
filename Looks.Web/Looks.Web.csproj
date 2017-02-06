@@ -343,6 +343,7 @@
     <Content Include="Views\Signup\Appearance.cshtml" />
     <Content Include="Views\Home\View.cshtml" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <Content Include="Views\Signup\_stylePartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
