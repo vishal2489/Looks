@@ -1,7 +1,4 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Looks.Models;
 
@@ -105,17 +102,49 @@ namespace Looks.Web.Controllers {
             return RedirectToAction("Sizes");
         }
         public ActionResult Sizes() {
-            return View();
+            
+            ViewBag.WaistSizes = GetWaistSizes();
+            ViewBag.ShoesSizes = GetShoesSizes();
+            ViewBag.JacketSizes = GetJacketSizes();
+            return View(new FittingInformation());
         }
-        public ActionResult Wanted() {
-            return View();
+      
+        [HttpPost]
+        public ActionResult Sizes(FittingInformation fittingInfo) {
+            return RedirectToAction("Appearance");
         }
-        public ActionResult Owned() {
-            return View();
+        //public ActionResult Wanted() {
+        //    return View();
+        //}
+        //public ActionResult Owned() {
+        //    return View();
+        //}
+        //public ActionResult Appearance() {
+        //    return View();
+        //}
+        private IEnumerable<SelectListItem> GetWaistSizes() {
+            var list = new List<SelectListItem>();
+            list.Add(new SelectListItem() { Value = "0", Text = "Don't Know" });
+            for(int i = 26; i <= 40; i++) {
+                list.Add(new SelectListItem() { Value = i.ToString(), Text = i.ToString() });
+            }
+            return list;
         }
-        public ActionResult Appearance() {
-            return View();
+        private IEnumerable<SelectListItem> GetShoesSizes() {
+            var list = new List<SelectListItem>();
+            list.Add(new SelectListItem() { Value = "0", Text = "Don't Know" });
+            for(int i = 6; i <= 12; i++) {
+                list.Add(new SelectListItem() { Value = i.ToString(), Text = $"UK-{i.ToString()}" });
+            }
+            return list;
         }
-
+        private IEnumerable<SelectListItem> GetJacketSizes() {
+            var list = new List<SelectListItem>();
+            list.Add(new SelectListItem() { Value = "0", Text = "Don't Know" });
+            for(int i = 32; i <= 46; i = i + 2) {
+                list.Add(new SelectListItem() { Value = i.ToString(), Text = i.ToString() });
+            }
+            return list;
+        }
     }
 }
