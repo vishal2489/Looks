@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 namespace Looks.Models {
-    public class UserModel: EntityBase {
+    public class UserModel : EntityBase {
         public UserModel() {
             PersonalInfo = new PersonalInformation();
             Fittings = new FittingInformation();
@@ -35,28 +35,52 @@ namespace Looks.Models {
     public class FittingInformation {
         public FittingInformation() {
             TrouserFitType = new FittingType();
+           // SpecialFeature = new BodyFeature();
         }
         public FittingType TrouserFitType { get; set; } //slim, regular
-        public string TopSize { get; set; }
+        public TopSizes TopSize { get; set; }
         public short WaistSize { get; set; }
         public short LegLenght { get; set; }
         public short ShoeSize { get; set; }
         public short JacketSize { get; set; }
-        public BodyFeature SpecialFeature { get; set; }
+
+        public bool IsBroadSholders { get; set; }
+        public bool IsBroadChest { get; set; }
+        public bool IsLongArms { get; set; }
+        public bool IsLongLegs { get; set; }
+        public bool IsShortLegs { get; set; }
+        public bool IsMuscularThighs { get; set; }
+        public bool IsTammy { get; set; }
+        public bool IsVerySlim { get; set; }
+        public bool IsBetweenSizes { get; set; }
 
     }
 
-    public enum BodyFeature {
-        BroadSholders,
-        BroadChest,
-        LongArms,
-        LongLegs,
-        ShortLegs,
-        MuscularThighs,
-        Tammy,
-        VerySlim,
-        BetweenSizes
+    public enum TopSizes {
+        XXS,
+        XS,
+        S,
+        M,
+        L,
+        XL,
+        XXL
+
     }
+
+    public class BodyFeature {
+
+        public bool IsBroadSholders { get; set; }
+        public bool IsBroadChest { get; set; }
+        public bool IsLongArms { get; set; }
+        public bool IsLongLegs { get; set; }
+        public bool IsShortLegs { get; set; }
+        public bool IsMuscularThighs { get; set; }
+        public bool IsTammy { get; set; }
+        public bool IsVerySlim { get; set; }
+        public bool IsBetweenSizes { get; set; }
+    }
+
+
 
     public class SocialInformation {
         public string FacebookUrl { get; set; }
@@ -79,7 +103,7 @@ namespace Looks.Models {
             Brands = new List<Brand>();
             Budget = new Budget();
 
-            
+
         }
         public WildNess WildNess { get; set; }
         public List<Style> WeekendStyles { get; set; }
